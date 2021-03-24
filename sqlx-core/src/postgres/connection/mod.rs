@@ -110,7 +110,7 @@ impl Debug for PgConnection {
 
 impl Drop for PgConnection {
     fn drop(&mut self) {
-        self.close();
+        &mut self.close();
     }
 }
 
